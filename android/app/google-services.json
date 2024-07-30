@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "565411148354",
+    "project_id": "balto-ajtech",
+    "storage_bucket": "balto-ajtech.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:565411148354:android:465742f34f33d5016b73db",
+        "android_client_info": {
+          "package_name": "com.balto.balto"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "565411148354-c0s5q4fu71ppe6ma95f1s34mfhv9kf1t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA79R3fI4uTtrGEnfds3gYpZFYt0pH_j9s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "565411148354-c0s5q4fu71ppe6ma95f1s34mfhv9kf1t.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "565411148354-j339ll36gdt7auipafb68spmjvi2o7to.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.balto.balto"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,31 @@
+0000000000000000000000000000000000000000 f23d8f3d85eb3c6e27b8e2a5d5ecc268cc3e4d65 widigdacahya <rizkiwidigda@gmail.com> 1720146534 +0700	commit (initial): init project
+f23d8f3d85eb3c6e27b8e2a5d5ecc268cc3e4d65 cc2ffacda72eb1cd5238f7b41fe4cac144508ede widigdacahya <rizkiwidigda@gmail.com> 1720416028 +0700	commit: register and login Balto
+cc2ffacda72eb1cd5238f7b41fe4cac144508ede 3386dbb40031fadca68739d966ffb5e54ff332b9 widigdacahya <rizkiwidigda@gmail.com> 1720418294 +0700	commit: adjust overlfow issues in keyboard login and registe
+3386dbb40031fadca68739d966ffb5e54ff332b9 5a30370ed28cd64817ee9ffa51f26e25568dff00 widigdacahya <rizkiwidigda@gmail.com> 1720581636 +0700	commit: change password and account deletion
+5a30370ed28cd64817ee9ffa51f26e25568dff00 be09f948405f7a414fb3b1ef7eb1b894a3369eb7 widigdacahya <rizkiwidigda@gmail.com> 1720779912 +0700	commit: Bincang UMKM screen
+be09f948405f7a414fb3b1ef7eb1b894a3369eb7 b3107295d6b76a8e335a63bd1188a63ea263645d widigdacahya <rizkiwidigda@gmail.com> 1721006085 +0700	commit: adjust register
+b3107295d6b76a8e335a63bd1188a63ea263645d 07f38588650e4caddc121bb18f8983b2e6c77160 widigdacahya <rizkiwidigda@gmail.com> 1721018122 +0700	commit: detail post
+07f38588650e4caddc121bb18f8983b2e6c77160 3f86c17f239aeaa042a9eb3bc5abaad65cab42c6 widigdacahya <rizkiwidigda@gmail.com> 1721038470 +0700	commit: profile screen adjustment
+3f86c17f239aeaa042a9eb3bc5abaad65cab42c6 ea0194321d845be4a0f7fd46e2cf1365eef4d042 widigdacahya <rizkiwidigda@gmail.com> 1721094370 +0700	commit: menu page adjustment
+ea0194321d845be4a0f7fd46e2cf1365eef4d042 d36882455bb6087be268094e86f28ea9d66f8bb2 widigdacahya <rizkiwidigda@gmail.com> 1721174747 +0700	commit: uploading post image
+d36882455bb6087be268094e86f28ea9d66f8bb2 1168d9e8d6ccdc71379cdea6d229fc89f4f89e22 widigdacahya <rizkiwidigda@gmail.com> 1721191694 +0700	commit: layout for comment in post detail of Bincang UMKM
+1168d9e8d6ccdc71379cdea6d229fc89f4f89e22 b8c5c69214d7c35c6633da11e41dd70acfbfcbfb widigdacahya <rizkiwidigda@gmail.com> 1721202775 +0700	commit: add functionality to add comment
+b8c5c69214d7c35c6633da11e41dd70acfbfcbfb 24f4601f6ae60ecc262f5fe5963f7c7b74b8cc5f widigdacahya <rizkiwidigda@gmail.com> 1721328507 +0700	commit: updating profile impact to post and comment in Bincang UMKM
+24f4601f6ae60ecc262f5fe5963f7c7b74b8cc5f fb20fd9d2e1b37969984fb1d21ef685a43ef9772 widigdacahya <rizkiwidigda@gmail.com> 1721332251 +0700	commit: edit post
+fb20fd9d2e1b37969984fb1d21ef685a43ef9772 f0a269a18a00df032e6d7044c3e52ceb7c20d462 widigdacahya <rizkiwidigda@gmail.com> 1721663095 +0700	commit: delete comment
+f0a269a18a00df032e6d7044c3e52ceb7c20d462 101a72a12601470ad61d0af0f321d0b862db7f2a widigdacahya <rizkiwidigda@gmail.com> 1721665341 +0700	commit: deleting post
+101a72a12601470ad61d0af0f321d0b862db7f2a 0aeb5c54c7d97138ed2b95669523e462ca5cc4f1 widigdacahya <rizkiwidigda@gmail.com> 1721668465 +0700	commit: add report
+0aeb5c54c7d97138ed2b95669523e462ca5cc4f1 46c1b7d3b3f7345d4368c788fb989a9664c63f94 widigdacahya <rizkiwidigda@gmail.com> 1721877644 +0700	commit: account deletion and some adjustment
+46c1b7d3b3f7345d4368c788fb989a9664c63f94 b6c185f84f8291953503b614e7c98d5e2759907d widigdacahya <rizkiwidigda@gmail.com> 1721888934 +0700	commit: business profile management
+b6c185f84f8291953503b614e7c98d5e2759907d 972bab2d19d58de8a71889c27761078a8747f4cb widigdacahya <rizkiwidigda@gmail.com> 1721916196 +0700	commit: having business data on user
+972bab2d19d58de8a71889c27761078a8747f4cb 476e1bf07b4809f1a56ed7c0b42efbe2ae0f26fb widigdacahya <rizkiwidigda@gmail.com> 1721958539 +0700	commit: profile business
+476e1bf07b4809f1a56ed7c0b42efbe2ae0f26fb f8267d0c7038a976649f44c14f60bf32e9e71424 widigdacahya <rizkiwidigda@gmail.com> 1722130291 +0700	commit: homescreen
+f8267d0c7038a976649f44c14f60bf32e9e71424 c2d888057b0ce8594f2888088ae714763284a15b widigdacahya <rizkiwidigda@gmail.com> 1722136602 +0700	commit: adjustment on input target predition and progress hasil prediksi lokasi
+c2d888057b0ce8594f2888088ae714763284a15b 5dc61b6dd50e70de86ac9c2af25faf30a849e451 widigdacahya <rizkiwidigda@gmail.com> 1722164387 +0700	commit: detail kelurahan, prediction result screen
+5dc61b6dd50e70de86ac9c2af25faf30a849e451 23d71c125aeac2c0161046077459dead818c97a7 widigdacahya <rizkiwidigda@gmail.com> 1722209371 +0700	commit: prediction location endpoint mock implemented
+23d71c125aeac2c0161046077459dead818c97a7 dd7a344162e6291ba84c5c9f83d3b992fbc5b6e0 widigdacahya <rizkiwidigda@gmail.com> 1722211995 +0700	commit: homescreen category and public place adjustment
+dd7a344162e6291ba84c5c9f83d3b992fbc5b6e0 98394714bd843130bdd79f88e2ad52cdc89b7760 widigdacahya <rizkiwidigda@gmail.com> 1722233524 +0700	commit: detail merchant endpoint adjustment
+98394714bd843130bdd79f88e2ad52cdc89b7760 24dac6f9647d1505f3910eea8bf76bc953d23259 widigdacahya <rizkiwidigda@gmail.com> 1722242515 +0700	commit: prediction location beautify
+24dac6f9647d1505f3910eea8bf76bc953d23259 55d356bdc8c7148155e6606d55a9aca7efed612d widigdacahya <rizkiwidigda@gmail.com> 1722256598 +0700	commit: kelurahan detail layout adjustment
+55d356bdc8c7148155e6606d55a9aca7efed612d a412d715302bb6b2900d07519669ade3c468d216 widigdacahya <rizkiwidigda@gmail.com> 1722297248 +0700	commit: layout merchant detail
+a412d715302bb6b2900d07519669ade3c468d216 7bdadb0063d1a03b3aadb68d035436bd752c7744 widigdacahya <rizkiwidigda@gmail.com> 1722358655 +0700	commit: adjsutment layout
