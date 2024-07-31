@@ -16,7 +16,7 @@ class LocationPredictionProvider with ChangeNotifier {
 
     try {
       final response = await http.post(
-        Uri.parse('https://api.mocki.io/v2/ise0kv73/location-prediction'),
+        Uri.parse('https://api.baltohackathonbi2024.com/location-prediction'),
         headers: {'Content-Type': 'application/json'},
         body: json.encode(data),
       );

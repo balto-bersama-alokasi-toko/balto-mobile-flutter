@@ -62,12 +62,176 @@ class _BerandaScreenState extends State<BerandaScreen> {
   TextEditingController _controllerMontylyTargetIncome = TextEditingController();
 
   final Map<String, List<String>> businessOptions = {
-    'Makanan & Minuman': ['Kafe & Minuman', 'Restoran Umum', 'Warung', 'Roti, Kue, dan Cemilan lainnya', 'Regional'],
-    'Barang Sehari-hari': ['Retail', 'Apotek & Produk Kesehatan lainnya'],
-    'Jasa' : ['Printing', 'Photo', 'Jasa', 'Otomotif', 'Kosmetik', 'Kebersihan'],
-    'Entertainment': ['Olahraga', 'Entertainment'],
-    'Peralatan dan Perlengkapan Jangka Panjang' : ['Peralatan & Barang Elektronik', 'Materials', 'Optician', 'Clothing'],
-    'Others' : ['Properti']
+    "Kafe dan Minuman": [
+      "cafe",
+      "coffee",
+      "kopi",
+      "tea",
+      "teh",
+      "drink",
+      "juice",
+      "teahouse",
+      "beer",
+      "bar",
+      "beverage"
+    ],
+    "Warung": [
+      "warung",
+      "stall",
+      "hawker"
+    ],
+    "Regional": [
+      "indonesian",
+      "betawi",
+      "chinese",
+      "sunda",
+      "padang",
+      "javanese",
+      "japanese",
+      "malaysian"
+    ],
+    "Apotek dan Produk Kesehatan Lainnya": [
+      "medical",
+      "pharmacy",
+      "drugs",
+      "health",
+      "baby",
+      "clinic",
+      "dentist",
+      "hospital",
+      "drugstore",
+      "doctor"
+    ],
+    "Kosmetik": [
+      "beauty",
+      "skin",
+      "salon",
+      "barber",
+      "beauty"
+    ],
+    "Olahraga": [
+      "sport",
+      "fitness",
+      "physical",
+      "gym",
+      "sports",
+      "swimming",
+      "badminton",
+      "golf"
+    ],
+    "Otomotif": [
+      "car",
+      "auto",
+      "vehicle",
+      "motorcycle"
+    ],
+    "Printing": [
+      "copy",
+      "printing",
+      "photocopy",
+      "printer"
+    ],
+    "Kebersihan": [
+      "laundry",
+      "cleaner",
+      "laundromat"
+    ],
+    "Photo": [
+      "photographer",
+      "photo",
+      "photography"
+    ],
+    "Roti, Kue, dan Cemilan Lainnya": [
+      "fruit",
+      "martabak",
+      "bakery",
+      "murtabak",
+      "ice",
+      "cream",
+      "chocolate",
+      "snack",
+      "dessert"
+    ],
+    "Peralatan dan Barang Elektronik": [
+      "vaporizer",
+      "phone",
+      "cell",
+      "laptop",
+      "electronics",
+      "video",
+      "game",
+      "toy"
+    ],
+    "Materials": [
+      "building",
+      "materials",
+      "cement"
+    ],
+    "Clothing": [
+      "clothing",
+      "shirt",
+      "baju",
+      "jeans",
+      "kaos",
+      "tailor",
+      "dressmaker"
+    ],
+    "Properti": [
+      "hotel",
+      "property",
+      "housing",
+      "house",
+      "homestay",
+      "apartment"
+    ],
+    "Restoran Umum": [
+      "diner",
+      "kitchen",
+      "restaurant",
+      "chicken",
+      "creperie",
+      "cafeteria",
+      "food",
+      "grill"
+    ],
+    "Retail": [
+      "grocery",
+      "deli",
+      "supermarket",
+      "shopping",
+      "convenience",
+      "store",
+      "shop",
+      "market",
+      "wholesaler",
+      "greengrocer",
+      "hypermarket"
+    ],
+    "Jasa": [
+      "service",
+      "reflexologist"
+    ],
+    "Others": [
+      "company",
+      "investment",
+      "office",
+      "school",
+      "manufacturer",
+      "non-profit",
+      "veterinarian"
+    ],
+    "Optics": [
+      "optician"
+    ],
+    "Entertainment": [
+      "playground"
+    ],
+    "Transportation": [
+      "travel"
+    ],
+    "Unclassified": [
+      "mosque"
+    ]
   };
 
   List<String> get businessNotes {
@@ -226,8 +390,8 @@ class _BerandaScreenState extends State<BerandaScreen> {
   void _submitData() async {
     final data = {
       'kategori': businessType ?? '',
-      'sub_kategori': businessNote ?? '',
-      'target_penghasilan': monthlyIncomeTarget ?? '',
+      // 'sub_kategori': businessNote ?? '',
+      // 'target_penghasilan': monthlyIncomeTarget ?? '',
     };
 
     final locationProvider = Provider.of<LocationPredictionProvider>(context, listen: false);
@@ -656,8 +820,11 @@ class _BerandaScreenState extends State<BerandaScreen> {
                           Expanded(
                               child: CardUmkmCategoryAround(
                                 onTap: () {
-                                  ScaffoldMessenger.of(context).showSnackBar(
-                                      SnackBar(content: Text('On development'))
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => MerchantCategoryScreen(category: 'Restoran Umum'),
+                                    ),
                                   );
                                 },
                                 title: 'Restoran umum',
@@ -668,8 +835,11 @@ class _BerandaScreenState extends State<BerandaScreen> {
                           Expanded(
                               child: CardUmkmCategoryAround(
                                 onTap: () {
-                                  ScaffoldMessenger.of(context).showSnackBar(
-                                      SnackBar(content: Text('On development'))
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => MerchantCategoryScreen(category: 'Apotek dan Produk Kesehatan Lainnya'),
+                                    ),
                                   );
                                 },
                                 title: 'Apotek & kesehatan',
@@ -685,8 +855,11 @@ class _BerandaScreenState extends State<BerandaScreen> {
                           Expanded(
                               child: CardUmkmCategoryAround(
                                 onTap: () {
-                                  ScaffoldMessenger.of(context).showSnackBar(
-                                      SnackBar(content: Text('On development'))
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => MerchantCategoryScreen(category: 'Olahraga'),
+                                    ),
                                   );
                                 },
                                 title: 'Olahraga',
@@ -697,8 +870,11 @@ class _BerandaScreenState extends State<BerandaScreen> {
                           Expanded(
                               child: CardUmkmCategoryAround(
                                 onTap: () {
-                                  ScaffoldMessenger.of(context).showSnackBar(
-                                      SnackBar(content: Text('On development'))
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => MerchantCategoryScreen(category: 'Printing'),
+                                    ),
                                   );
                                 },
                                 title: 'Printing',
@@ -714,8 +890,11 @@ class _BerandaScreenState extends State<BerandaScreen> {
                           Expanded(
                               child: CardUmkmCategoryAround(
                                 onTap: () {
-                                  ScaffoldMessenger.of(context).showSnackBar(
-                                      SnackBar(content: Text('On development'))
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => MerchantCategoryScreen(category: 'Clothing'),
+                                    ),
                                   );
                                 },
                                 title: 'Pakaian',
@@ -726,8 +905,11 @@ class _BerandaScreenState extends State<BerandaScreen> {
                           Expanded(
                               child: CardUmkmCategoryAround(
                                 onTap: () {
-                                  ScaffoldMessenger.of(context).showSnackBar(
-                                      SnackBar(content: Text('On development'))
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => MerchantCategoryScreen(category: 'Properti'),
+                                    ),
                                   );
                                 },
                                 title: 'Properti',
@@ -778,8 +960,11 @@ class _BerandaScreenState extends State<BerandaScreen> {
                           Expanded(
                               child: CardUmkmCategoryAround(
                                 onTap: () {
-                                  ScaffoldMessenger.of(context).showSnackBar(
-                                      SnackBar(content: Text('On development'))
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => MerchantCategoryScreen(category: 'Entertainment'),
+                                    ),
                                   );
                                 },
                                 title: 'Entertainment',
@@ -790,8 +975,11 @@ class _BerandaScreenState extends State<BerandaScreen> {
                           Expanded(
                               child: CardUmkmCategoryAround(
                                 onTap: () {
-                                  ScaffoldMessenger.of(context).showSnackBar(
-                                      SnackBar(content: Text('On development'))
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => MerchantCategoryScreen(category: 'Transportation'),
+                                    ),
                                   );
                                 },
                                 title: 'Transportation',
@@ -807,8 +995,11 @@ class _BerandaScreenState extends State<BerandaScreen> {
                           Expanded(
                               child: CardUmkmCategoryAround(
                                 onTap: () {
-                                  ScaffoldMessenger.of(context).showSnackBar(
-                                      SnackBar(content: Text('On development'))
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => MerchantCategoryScreen(category: 'Photo'),
+                                    ),
                                   );
                                 },
                                 title: 'Foto',
@@ -819,8 +1010,11 @@ class _BerandaScreenState extends State<BerandaScreen> {
                           Expanded(
                               child: CardUmkmCategoryAround(
                                 onTap: () {
-                                  ScaffoldMessenger.of(context).showSnackBar(
-                                      SnackBar(content: Text('On development'))
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => MerchantCategoryScreen(category: 'Peralatan dan Barang Elektronik'),
+                                    ),
                                   );
                                 },
                                 title: 'Barang Elektronik',
@@ -836,8 +1030,11 @@ class _BerandaScreenState extends State<BerandaScreen> {
                           Expanded(
                               child: CardUmkmCategoryAround(
                                 onTap: () {
-                                  ScaffoldMessenger.of(context).showSnackBar(
-                                      SnackBar(content: Text('On development'))
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => MerchantCategoryScreen(category: 'Materials'),
+                                    ),
                                   );
                                 },
                                 title: 'Materials',
@@ -848,8 +1045,11 @@ class _BerandaScreenState extends State<BerandaScreen> {
                           Expanded(
                               child: CardUmkmCategoryAround(
                                 onTap: () {
-                                  ScaffoldMessenger.of(context).showSnackBar(
-                                      SnackBar(content: Text('On development'))
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => MerchantCategoryScreen(category: 'Kebersihan'),
+                                    ),
                                   );
                                 },
                                 title: 'Kebersihan',
@@ -865,8 +1065,11 @@ class _BerandaScreenState extends State<BerandaScreen> {
                           Expanded(
                               child: CardUmkmCategoryAround(
                                 onTap: () {
-                                  ScaffoldMessenger.of(context).showSnackBar(
-                                      SnackBar(content: Text('On development'))
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => MerchantCategoryScreen(category: 'Kosmetik'),
+                                    ),
                                   );
                                 },
                                 title: 'Kosmetik',
@@ -877,8 +1080,11 @@ class _BerandaScreenState extends State<BerandaScreen> {
                           Expanded(
                               child: CardUmkmCategoryAround(
                                 onTap: () {
-                                  ScaffoldMessenger.of(context).showSnackBar(
-                                      SnackBar(content: Text('On development'))
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => MerchantCategoryScreen(category: 'Otomotif'),
+                                    ),
                                   );
                                 },
                                 title: 'Otomotif',
@@ -894,8 +1100,11 @@ class _BerandaScreenState extends State<BerandaScreen> {
                           Expanded(
                               child: CardUmkmCategoryAround(
                                 onTap: () {
-                                  ScaffoldMessenger.of(context).showSnackBar(
-                                      SnackBar(content: Text('On development'))
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => MerchantCategoryScreen(category: 'Optics'),
+                                    ),
                                   );
                                 },
                                 title: 'Optik',
@@ -906,8 +1115,11 @@ class _BerandaScreenState extends State<BerandaScreen> {
                           Expanded(
                               child: CardUmkmCategoryAround(
                                 onTap: () {
-                                  ScaffoldMessenger.of(context).showSnackBar(
-                                      SnackBar(content: Text('On development'))
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => MerchantCategoryScreen(category: 'Kafe dan Minuman'),
+                                    ),
                                   );
                                 },
                                 title: 'Kafe & Minuman',
@@ -923,8 +1135,11 @@ class _BerandaScreenState extends State<BerandaScreen> {
                           Expanded(
                               child: CardUmkmCategoryAround(
                                 onTap: () {
-                                  ScaffoldMessenger.of(context).showSnackBar(
-                                      SnackBar(content: Text('On development'))
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => MerchantCategoryScreen(category: 'Warung'),
+                                    ),
                                   );
                                 },
                                 title: 'Warung',
@@ -935,8 +1150,11 @@ class _BerandaScreenState extends State<BerandaScreen> {
                           Expanded(
                               child: CardUmkmCategoryAround(
                                 onTap: () {
-                                  ScaffoldMessenger.of(context).showSnackBar(
-                                      SnackBar(content: Text('On development'))
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => MerchantCategoryScreen(category: 'Regional'),
+                                    ),
                                   );
                                 },
                                 title: 'Regional',
@@ -952,8 +1170,11 @@ class _BerandaScreenState extends State<BerandaScreen> {
                           Expanded(
                               child: CardUmkmCategoryAround(
                                 onTap: () {
-                                  ScaffoldMessenger.of(context).showSnackBar(
-                                      SnackBar(content: Text('On development'))
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => MerchantCategoryScreen(category: 'Roti, Kue, dan Cemilan Lainnya'),
+                                    ),
                                   );
                                 },
                                 title: 'Roti, kue, camilan',
@@ -964,8 +1185,11 @@ class _BerandaScreenState extends State<BerandaScreen> {
                           Expanded(
                               child: CardUmkmCategoryAround(
                                 onTap: () {
-                                  ScaffoldMessenger.of(context).showSnackBar(
-                                      SnackBar(content: Text('On development'))
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => MerchantCategoryScreen(category: 'Unclassified'),
+                                    ),
                                   );
                                 },
                                 title: 'Unclassified',
@@ -981,8 +1205,11 @@ class _BerandaScreenState extends State<BerandaScreen> {
                           Expanded(
                               child: CardUmkmCategoryAround(
                                 onTap: () {
-                                  ScaffoldMessenger.of(context).showSnackBar(
-                                      SnackBar(content: Text('On development'))
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => MerchantCategoryScreen(category: 'Others'),
+                                    ),
                                   );
                                 },
                                 title: 'Lainnya',

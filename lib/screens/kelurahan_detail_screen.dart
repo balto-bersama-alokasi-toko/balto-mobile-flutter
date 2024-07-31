@@ -15,7 +15,7 @@ class KelurahanDetailScreen extends StatefulWidget {
   final String kelurahanName;
   final double kelurahanRating;
   final int kelurahanPopulation;
-  final int kelurahanTransaction;
+  final double kelurahanTransaction;
 
   KelurahanDetailScreen({
     required this.kelurahanName,
@@ -35,6 +35,17 @@ class _KelurahanDetailScreenState extends State<KelurahanDetailScreen> {
   String formatNumber(int number) {
     final formatter = NumberFormat.decimalPattern('id');
     return formatter.format(number);
+  }
+
+  String formatNumberTransaksi(String numberString) {
+    // Konversi dari string ke double
+    double number = double.parse(numberString);
+    double absoluteNumber = number.abs();
+    // Inisialisasi formatter untuk format angka dengan pemisah ribuan sesuai locale Indonesia
+    final formatter = NumberFormat.decimalPattern('id');
+
+    // Memformat angka
+    return formatter.format(absoluteNumber);
   }
 
   List<dynamic> get filteredMerchants {
@@ -222,7 +233,8 @@ class _KelurahanDetailScreenState extends State<KelurahanDetailScreen> {
                                     ],
                                   ),
                                   Text(
-                                    'Rp ' + formatNumber(int.parse(widget.kelurahanTransaction.toString())),
+                                    'Rp ' + formatNumberTransaksi(widget.kelurahanTransaction.toString()),
+                                    // 'Rp ' + formatNumber(int.parse(widget.kelurahanTransaction.toString())),
                                     style: TextStyle(
                                       fontSize: 20
                                     ),

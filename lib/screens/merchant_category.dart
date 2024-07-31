@@ -43,7 +43,30 @@ class _MerchantCategoryScreenState extends State<MerchantCategoryScreen> {
               return ListTile(
                 title: Text(merchant['merchant_name']),
                 subtitle: Text(merchant['merchant_kelurahan_name']),
-                leading: Image.network(merchant['merchant_photo']),
+                leading: ClipRRect(
+                  borderRadius: BorderRadius.circular(40),
+                  child: merchant['merchant_photo'] != null && merchant['merchant_photo'].isNotEmpty
+                    ? FadeInImage.assetNetwork(
+                      width: 48,
+                      height: 48,
+                      placeholder: 'assets/img/placeholderimg.png',
+                      image: merchant['merchant_photo'],
+                      fit: BoxFit.cover,
+                      imageErrorBuilder: (context, error, stackTrace) {
+                        return Image.asset(
+                          width: 48,
+                          height: 48,
+                          'assets/img/pchmerchant.jpg',
+                          fit: BoxFit.cover,
+                        );
+                      },
+                      )
+                    : const CircleAvatar(
+                    radius: 24,
+                    backgroundImage:
+                    AssetImage('assets/img/placeholderimg.png'),
+                  ),
+                ),
                 onTap: () {
                   Navigator.push(
                     context,

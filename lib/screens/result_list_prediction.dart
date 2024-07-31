@@ -33,6 +33,17 @@ class _ResultPredictionListScreenState extends State<ResultPredictionListScreen>
     return formatter.format(number);
   }
 
+  String formatNumberTransaksi(String numberString) {
+    // Konversi dari string ke double
+    double number = double.parse(numberString);
+    double absoluteNumber = number.abs();
+    // Inisialisasi formatter untuk format angka dengan pemisah ribuan sesuai locale Indonesia
+    final formatter = NumberFormat.decimalPattern('id');
+
+    // Memformat angka
+    return formatter.format(absoluteNumber);
+  }
+
   void _showLoading() {
     setState(() {
       _isLoading = true;
@@ -51,7 +62,7 @@ class _ResultPredictionListScreenState extends State<ResultPredictionListScreen>
       String kelurahanName,
       double kelurahanRating,
       int kelurahanPopulation,
-      int kelurahanTransaction,
+      double kelurahanTransaction,
   ) async {
     _showLoading();
     final kelurahanDetailProvider = Provider.of<KelurahanDetailProvider>(context, listen: false);
@@ -190,7 +201,7 @@ class _ResultPredictionListScreenState extends State<ResultPredictionListScreen>
                         children: [
                           const SizedBox(height: 8),
                           Row(
-                            crossAxisAlignment: CrossAxisAlignment.end,
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Icon(
                                 Icons.star_rate_rounded,
@@ -204,11 +215,13 @@ class _ResultPredictionListScreenState extends State<ResultPredictionListScreen>
                                 size: 18,
                               ),
                               const SizedBox(width: 4),
-                              Expanded(child: Text('Rp ' + formatNumber(int.parse(location['kelurahan_transaction'].toString()))))
+                              // Expanded(child: Text('Rp ' + formatNumber(int.parse(location['kelurahan_transaksi'].toString()))))
+                              Expanded(child: Text('Rp ' + formatNumberTransaksi(location['kelurahan_transaksi'].toString())))
                             ],
                           ),
                           const SizedBox(height: 8),
                           Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Icon(
                                 Icons.people,
@@ -234,7 +247,7 @@ class _ResultPredictionListScreenState extends State<ResultPredictionListScreen>
                           location['kelurahan_name'],
                           location['kelurahan_rating'],
                           location['kelurahan_population'],
-                          location['kelurahan_transaction'],
+                          location['kelurahan_transaksi'] ,
                         );
                       },
                     );
