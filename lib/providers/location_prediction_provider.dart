@@ -16,7 +16,7 @@ class LocationPredictionProvider with ChangeNotifier {
 
     try {
       final response = await http.post(
-        Uri.parse('https://api.baltohackathonbi2024.com/location-prediction'),
+        Uri.parse('http://34.50.68.68:3000/location-prediction'),
         headers: {'Content-Type': 'application/json'},
         body: json.encode(data),
       );

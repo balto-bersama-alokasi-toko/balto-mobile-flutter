@@ -10,7 +10,7 @@ class LocationAroundProvider with ChangeNotifier {
     isLoading = true;
     notifyListeners();
 
-    final url = Uri.parse('https://api.baltohackathonbi2024.com/location-around');
+    final url = Uri.parse('http://34.50.68.68:3000/location-around');
     final response = await http.post(
       url,
       headers: {'Content-Type': 'application/json'},

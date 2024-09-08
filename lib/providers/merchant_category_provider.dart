@@ -16,7 +16,7 @@ class MerchantCategoryProvider with ChangeNotifier {
 
     try {
       final response = await http.post(
-        Uri.parse('https://api.baltohackathonbi2024.com/merchant-category'),
+        Uri.parse('http://34.50.68.68:3000/merchant-category'),
         headers: {'Content-Type': 'application/json'},
         body: json.encode({'merchant_category': category}),
       );

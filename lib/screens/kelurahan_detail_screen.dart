@@ -196,7 +196,7 @@ class _KelurahanDetailScreenState extends State<KelurahanDetailScreen> {
                                     ],
                                   ),
                                   Text(
-                                    '${widget.kelurahanRating}',
+                                    '${widget.kelurahanRating.toStringAsFixed(2)}',
                                     style: TextStyle(
                                         fontSize: 20
                                     ),
@@ -233,7 +233,7 @@ class _KelurahanDetailScreenState extends State<KelurahanDetailScreen> {
                                     ],
                                   ),
                                   Text(
-                                    'Rp ' + formatNumberTransaksi(widget.kelurahanTransaction.toString()),
+                                    'Rp ' + formatNumberTransaksi(widget.kelurahanTransaction.toInt().toString()),
                                     // 'Rp ' + formatNumber(int.parse(widget.kelurahanTransaction.toString())),
                                     style: TextStyle(
                                       fontSize: 20
@@ -360,7 +360,9 @@ class _KelurahanDetailScreenState extends State<KelurahanDetailScreen> {
               padding: EdgeInsets.only(top: 0, left: 16),
               child: ElevatedButton(
                 onPressed: () {
-
+                  ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(content: Text('On development'))
+                  );
                 },
                 child: Row(
                   mainAxisSize: MainAxisSize.min,

@@ -16,7 +16,7 @@ class KelurahanDetailProvider with ChangeNotifier {
 
     try {
       final response = await http.post(
-        Uri.parse('https://api.baltohackathonbi2024.com/kelurahan-detail'),
+        Uri.parse('http://34.50.68.68:3000/kelurahan-detail'),
         headers: {'Content-Type': 'application/json'},
         body: json.encode({'kelurahan_id': kelurahanId}),
       );

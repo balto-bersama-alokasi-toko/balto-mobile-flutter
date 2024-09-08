@@ -186,7 +186,10 @@ class _ResultPredictionListScreenState extends State<ResultPredictionListScreen>
                   physics: NeverScrollableScrollPhysics(),
                   itemCount: widget.locations.length,
                   itemBuilder: (context, index) {
-                    final location = widget.locations[index];
+                    List<dynamic> sortedLocations = List.from(widget.locations);
+                    sortedLocations.sort((a, b) => (b['kelurahan_rating']).compareTo(a['kelurahan_rating']));
+                    // final location = widget.locations[index];
+                    final location = sortedLocations[index];
                     return ListTile(
                       leading: CircleAvatar(
                         radius: 24,
@@ -208,7 +211,7 @@ class _ResultPredictionListScreenState extends State<ResultPredictionListScreen>
                                 size: 18,
                               ),
                               const SizedBox(width: 4),
-                              Expanded(child: Text('${location['kelurahan_rating']}')),
+                              Expanded(child: Text('${location['kelurahan_rating'].toStringAsFixed(2)}')),
                               const SizedBox(width: 16),
                               Icon(
                                 Icons.account_balance_wallet,
@@ -216,7 +219,7 @@ class _ResultPredictionListScreenState extends State<ResultPredictionListScreen>
                               ),
                               const SizedBox(width: 4),
                               // Expanded(child: Text('Rp ' + formatNumber(int.parse(location['kelurahan_transaksi'].toString()))))
-                              Expanded(child: Text('Rp ' + formatNumberTransaksi(location['kelurahan_transaksi'].toString())))
+                              Expanded(child: Text('Rp ' + formatNumberTransaksi(location['kelurahan_transaksi'].toInt().toString())))
                             ],
                           ),
                           const SizedBox(height: 8),
